@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    tools:context=".DrawableLayoutEditViewActivity">
+
+    <!--DrawerLayout比较特殊，fitsSystemWindows写在主内容中才能达到隐藏状态栏的效果。
+    若只是写在最外层布局是无法把内容部分提高到状态栏区的-->
+    <!--侧滑内容设置fitsSystemWindows也不会改变paddingTop，手动设置吧-->
+    <FrameLayout
+        android:background="#FFE"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#EFE">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="600dp"
+                    android:hint="底部输入框"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </android.support.constraint.ConstraintLayout>
+        </ScrollView>
+
+        <com.example.a26050.statusbaradapterdemo.utils.TitleBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title_text="标题党" />
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#FEE"
+        android:text="侧滑内容" />
+
+</android.support.v4.widget.DrawerLayout>
