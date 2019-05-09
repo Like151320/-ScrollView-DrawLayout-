@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.a26050.statusbaradapterdemo.measureTest.TLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".measureTest.MeasureTestActivity">
+
+    <com.example.a26050.statusbaradapterdemo.measureTest.TConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFF">
+
+        <com.example.a26050.statusbaradapterdemo.measureTest.TTextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="#F00"
+            android:text="aaa" />
+
+        <com.example.a26050.statusbaradapterdemo.measureTest.TWebView
+            android:id="@+id/webView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="#F0F"
+            app:layout_constraintEnd_toEndOf="parent">
+
+        </com.example.a26050.statusbaradapterdemo.measureTest.TWebView>
+
+    </com.example.a26050.statusbaradapterdemo.measureTest.TConstraintLayout>
+
+
+</com.example.a26050.statusbaradapterdemo.measureTest.TLinearLayout>
